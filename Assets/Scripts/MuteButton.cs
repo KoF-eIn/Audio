@@ -1,20 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MuteToggle : MonoBehaviour
+public class MuteButton : MonoBehaviour
 {
-    [SerializeField] private Button _muteButton;
+    [SerializeField] private Button _button;
 
     [SerializeField] private AudioVolumeControl _volumeControl;
 
     private void OnEnable()
     {
-        _muteButton.onClick.AddListener(ToggleMute);
+        _button.onClick.AddListener(ToggleMute);
     }
 
     private void OnDisable()
     {
-        _muteButton.onClick.RemoveListener(ToggleMute);
+        _button.onClick.RemoveListener(ToggleMute);
     }
 
     private void ToggleMute()

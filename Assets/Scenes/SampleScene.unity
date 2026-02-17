@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 15902840}
   - component: {fileID: 15902839}
   - component: {fileID: 15902841}
+  - component: {fileID: 15902842}
   m_Layer: 5
   m_Name: Button (Legacy) (1)
   m_TagString: Untagged
@@ -243,6 +244,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &15902842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15902837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d8797282ab60a428aff70a669681e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 15902841}
+  _source: {fileID: 2014892520}
 --- !u!1 &160510789
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +627,7 @@ GameObject:
   - component: {fileID: 507585531}
   - component: {fileID: 507585530}
   - component: {fileID: 507585532}
+  - component: {fileID: 507585533}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -721,6 +737,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &507585533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507585528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d8797282ab60a428aff70a669681e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 507585532}
+  _source: {fileID: 1003861503}
 --- !u!1 &509124460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783904769}
   - component: {fileID: 783904770}
+  - component: {fileID: 783904771}
   m_Layer: 5
   m_Name: MusicVolume
   m_TagString: Untagged
@@ -1095,6 +1126,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &783904771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783904768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e3eeee698b7214a9cd6b468b82d242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volumeControl: {fileID: 1331797488}
+  _parameterName: MusicVolume
 --- !u!1 &817850977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869051671}
   - component: {fileID: 869051672}
+  - component: {fileID: 869051673}
   m_Layer: 5
   m_Name: MasterVolume
   m_TagString: Untagged
@@ -1264,6 +1310,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &869051673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869051670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e3eeee698b7214a9cd6b468b82d242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volumeControl: {fileID: 1331797488}
+  _parameterName: MasterVolume
 --- !u!1 &960835366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,9 +1883,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331797487}
-  - component: {fileID: 1331797491}
-  - component: {fileID: 1331797490}
-  - component: {fileID: 1331797489}
   - component: {fileID: 1331797488}
   m_Layer: 0
   m_Name: AudioManager
@@ -1862,55 +1919,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: f3a8ba826ab9aa44baefd344e7edb865, type: 2}
---- !u!114 &1331797489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331797485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a340f92cc46774bb81826dca1f6864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _muteButton: {fileID: 1388667191}
-  _volumeControl: {fileID: 1331797488}
---- !u!114 &1331797490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331797485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c7e88bca69e184291ea7a49cde6877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button1: {fileID: 507585532}
-  _button2: {fileID: 15902841}
-  _button3: {fileID: 1432072602}
-  _source1: {fileID: 1003861503}
-  _source2: {fileID: 2014892520}
-  _source3: {fileID: 306158574}
---- !u!114 &1331797491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331797485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 844f8e7105f6ee64dae13c8acf0a907c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _volumeControl: {fileID: 1331797488}
-  _masterSlider: {fileID: 869051672}
-  _buttonsSlider: {fileID: 2145163547}
-  _musicSlider: {fileID: 783904770}
-  _backgroundMusic: {fileID: 1403459972}
 --- !u!1 &1381819074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2006,7 @@ GameObject:
   - component: {fileID: 1388667190}
   - component: {fileID: 1388667189}
   - component: {fileID: 1388667191}
+  - component: {fileID: 1388667192}
   m_Layer: 5
   m_Name: MuteButton
   m_TagString: Untagged
@@ -2107,6 +2116,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1388667192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388667187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229d26a0d5b48434280ecc8e6e6f704a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 1388667191}
+  _volumeControl: {fileID: 1331797488}
 --- !u!1 &1403459970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +2270,7 @@ GameObject:
   - component: {fileID: 1432072604}
   - component: {fileID: 1432072603}
   - component: {fileID: 1432072602}
+  - component: {fileID: 1432072606}
   m_Layer: 5
   m_Name: Button (Legacy) (2)
   m_TagString: Untagged
@@ -2356,6 +2380,20 @@ RectTransform:
   m_AnchoredPosition: {x: 135, y: 120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1432072606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432072601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d8797282ab60a428aff70a669681e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 1432072602}
+  _source: {fileID: 306158574}
 --- !u!1 &1454802368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,6 +3047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145163546}
   - component: {fileID: 2145163547}
+  - component: {fileID: 2145163548}
   m_Layer: 5
   m_Name: ButtonVolume
   m_TagString: Untagged
@@ -3089,6 +3128,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2145163548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145163545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e3eeee698b7214a9cd6b468b82d242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volumeControl: {fileID: 1331797488}
+  _parameterName: ButtonsVolume
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

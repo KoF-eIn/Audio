@@ -5,9 +5,7 @@ public class AudioVolumeControl : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
 
-    private const string MasterParam = "MasterVolume";
-    private const string ButtonsParam = "ButtonsVolume";
-    private const string MusicParam = "MusicVolume";
+    private const string MasterParameter = "MasterVolume";
 
     private const float MinDb = -80f;
     private const float MinLinear = 0.0001f;
@@ -16,22 +14,20 @@ public class AudioVolumeControl : MonoBehaviour
 
     private float _lastMasterVolume = 1f;
 
-    public void SetMasterVolume(float linearValue)
+    public void SetVolume(string parameterName, float linearValue)
     {
-        _lastMasterVolume = linearValue;
+        if (_isMuted && parameterName == MasterParameter)
+        {
+            _lastMasterVolume = linearValue;
 
-        if (!_isMuted)
-            ApplyVolume(MasterParam, linearValue);
-    }
+            return;
+        }
 
-    public void SetButtonsVolume(float linearValue)
-    {
-        ApplyVolume(ButtonsParam, linearValue);
-    }
+        if (parameterName == MasterParameter)
+            _lastMasterVolume = linearValue;
 
-    public void SetMusicVolume(float linearValue)
-    {
-        ApplyVolume(MusicParam, linearValue);
+        float db = linearValue > MinLinear ? Mathf.Log10(linearValue) * 20 : MinDb;
+        _audioMixer.SetFloat(parameterName, db);
     }
 
     public void ToggleMute()
@@ -39,14 +35,8 @@ public class AudioVolumeControl : MonoBehaviour
         _isMuted = !_isMuted;
 
         if (_isMuted)
-            _audioMixer.SetFloat(MasterParam, MinDb);
+            _audioMixer.SetFloat(MasterParameter, MinDb);
         else
-            ApplyVolume(MasterParam, _lastMasterVolume);
-    }
-
-    private void ApplyVolume(string param, float linearValue)
-    {
-        float db = linearValue > MinLinear ? Mathf.Log10(linearValue) * 20 : MinDb;
-        _audioMixer.SetFloat(param, db);
+            SetVolume(MasterParameter, _lastMasterVolume);
     }
 }
